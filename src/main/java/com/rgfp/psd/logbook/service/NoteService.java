@@ -16,8 +16,11 @@ import java.util.Optional;
 public class NoteService {
 
     @Autowired
-    @Setter
     private NoteRepository noteRepository;
+
+    public void setNoteRepository(NoteRepository noteRepository) {
+        this.noteRepository = noteRepository;
+    }
 
     private List<Note> allNotes;
 
